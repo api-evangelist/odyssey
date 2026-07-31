@@ -1,9 +1,31 @@
 aid: odyssey
 name: Odyssey
-description: Odyssey is a company surfaced as a portfolio company of a16z, eqt-ventures, general-catalyst,
-  gv, union-square-ventures and added to the API Evangelist network as a stub for enrichment. This profile
-  is a lead awaiting the enrichment pipeline.
+description: >-
+  Odyssey is an AI research lab pioneering general-purpose world models — causal,
+  multimodal systems that learn to understand and simulate the world beyond language.
+  Its flagship, Odyssey-2 Pro, is a frontier world model that outputs continuous,
+  interactive, multi-minute video simulations in real time from text or image
+  prompts. Odyssey exposes this as a developer API: three surfaces (interactive
+  streams, viewable/broadcast streams, and asynchronous simulations) delivered over
+  WebRTC media plus a WebSocket signaling channel, driven by official JavaScript/
+  TypeScript and Python SDKs. Auth is an `ody_` API key with a client-credentials
+  pattern that mints short-lived session JWTs so browsers can connect without
+  exposing the key. Odyssey is backed by a16z, EQT Ventures, General Catalyst, GV,
+  and Union Square Ventures and is based in Menlo Park, California.
 url: https://raw.githubusercontent.com/api-evangelist/odyssey/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://odyssey.ml/logo-black.png
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -16,10 +38,45 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 9
+  pass: local-v1
 tags:
 - Company
-apis: []
+- Artificial Intelligence
+- World Models
+- Generative AI
+- Video Generation
+- Machine Learning
+- Real-Time Streaming
+- SDK
+- WebRTC
+apis:
+- name: Odyssey-2 Pro API
+  description: >-
+    Real-time world-model API. Embeds continuous, interactive video simulations
+    into applications via interactive streams, viewable/broadcast streams, and
+    asynchronous simulations, over WebRTC + WebSocket signaling with JS/Python SDKs.
+  humanURL: https://documentation.api.odyssey.ml/
+  baseURL: https://api.odyssey.ml
+  tags:
+  - World Models
+  - Video Generation
+  - Real-Time Streaming
+  properties:
+  - type: Documentation
+    url: https://documentation.api.odyssey.ml/
+  - type: GettingStarted
+    url: https://documentation.api.odyssey.ml/api-quick-start
+  - type: APIReference
+    url: https://documentation.api.odyssey.ml/sdk/javascript/introduction
+  - type: Authentication
+    url: authentication/odyssey-authentication.yml
+  - type: LLMsTxt
+    url: llms/odyssey-llms.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -28,3 +85,43 @@ maintainers:
 common:
 - type: Website
   url: https://odyssey.world
+- type: DeveloperPortal
+  url: https://developer.odyssey.ml/dashboard
+- type: Documentation
+  url: https://documentation.api.odyssey.ml/
+- type: APIReference
+  url: https://documentation.api.odyssey.ml/sdk/javascript/introduction
+- type: GettingStarted
+  url: https://documentation.api.odyssey.ml/api-quick-start
+- type: SignUp
+  url: https://developer.odyssey.ml/dashboard
+- type: Support
+  url: https://discord.com/invite/CmV5DgJMAW
+- type: Blog
+  url: https://odyssey.ml/writing
+- type: GitHubOrganization
+  url: https://github.com/odysseyml
+- type: TermsOfService
+  url: https://odyssey.ml/legal
+- type: PrivacyPolicy
+  url: https://odyssey.ml/legal
+- type: Authentication
+  url: authentication/odyssey-authentication.yml
+- type: Packages
+  url: packages/odyssey-packages.yml
+- type: SDKs
+  url: packages/odyssey-packages.yml
+- type: LLMsTxt
+  url: llms/odyssey-llms.txt
+- type: Conventions
+  url: conventions/odyssey-conventions.yml
+- type: ErrorCatalog
+  url: errors/odyssey-error-codes.yml
+- type: ChangeLog
+  url: changelog/odyssey-changelog.yml
+- type: Lifecycle
+  url: lifecycle/odyssey-lifecycle.yml
+- type: Components
+  url: components/odyssey-components.yml
+- type: DomainSecurity
+  url: security/odyssey-domain-security.yml

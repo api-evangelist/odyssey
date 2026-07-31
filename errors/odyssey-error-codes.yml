@@ -1,0 +1,38 @@
+generated: '2026-07-20'
+method: searched
+source: https://documentation.api.odyssey.ml/client-credentials
+also: https://documentation.api.odyssey.ml/stream-duration-limits
+format: sdk-exceptions
+envelope: >-
+  The SDKs surface failures as typed exceptions (Python: odyssey.exceptions;
+  JavaScript: thrown Error with .message) and as onError(error) callbacks on the
+  client. There is no documented RFC 9457 problem+json envelope — the surface is an
+  SDK over WebRTC/WebSocket, not a REST API.
+errors:
+- code: OdysseyAuthError
+  language: python
+  meaning: Invalid or expired API key when minting credentials.
+  action: Verify the ody_ API key from the developer dashboard; re-issue if revoked.
+- code: OdysseyConnectionError
+  language: python
+  meaning: Network issue or no streamers available to provision a session.
+  action: Retry with backoff; capacity for a streamer may be temporarily unavailable.
+- code: credit lease expired
+  meaning: >-
+    A per-stream duration limit was reached and the stream's credit lease could not
+    be renewed, so the stream is interrupted.
+  action: >-
+    Understand per-stream duration limits; start a new stream. See the Stream
+    Duration Limits guide.
+- code: token expired / connection rejected
+  meaning: >-
+    The client attempted connectWithCredentials() after the 600s session_token JWT
+    expired.
+  action: Mint fresh credentials server-side (createClientCredentials()); tokens do not refresh.
+- code: concurrency limit reached
+  meaning: >-
+    New interactive stream blocked because active + dangling sessions have reached the
+    plan's concurrent-stream limit.
+  action: >-
+    Call disconnect() on finished sessions; idle sessions auto-clear after 15 minutes.
+    Upgrade plan for a higher limit.

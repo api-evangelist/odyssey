@@ -1,0 +1,27 @@
+# Odyssey Documentation
+
+## Docs
+
+- [API Quick Start](https://documentation.api.odyssey.ml/api-quick-start.md): Integrate Odyssey-2 Pro into your application in 5 minutes.
+- [Broadcast](https://documentation.api.odyssey.ml/broadcast.md)
+- [Client Credentials](https://documentation.api.odyssey.ml/client-credentials.md): Keep your API key on the server and let browsers connect directly with short-lived credentials.
+- [Connection vs. Stream](https://documentation.api.odyssey.ml/connection-vs-stream.md)
+- [FAQ](https://documentation.api.odyssey.ml/faq.md)
+- [Introducing the Odyssey API](https://documentation.api.odyssey.ml/index.md): A new form of multimodal intelligence.
+- [Interaction Tips](https://documentation.api.odyssey.ml/interaction-tips.md): A practical guide with examples to get you started interacting with Odyssey-2 Pro.
+- [Odyssey-2 Pro Overview](https://documentation.api.odyssey.ml/odyssey-2-overview.md): A frontier world model that brings video to life.
+- [Examples](https://documentation.api.odyssey.ml/sdk/javascript/examples.md): Complete usage examples for the Odyssey client.
+- [Overview](https://documentation.api.odyssey.ml/sdk/javascript/introduction.md): Complete API reference for the Odyssey JavaScript client library.
+- [Odyssey Class](https://documentation.api.odyssey.ml/sdk/javascript/odyssey-class.md): Main client class for interacting with Odyssey's audio-visual intelligence.
+- [React Hook](https://documentation.api.odyssey.ml/sdk/javascript/react-hook.md): useOdyssey hook for managing Odyssey client lifecycle in React.
+- [Recordings](https://documentation.api.odyssey.ml/sdk/javascript/recordings.md): Working with stream recordings in the Odyssey client.
+- [Simulate API](https://documentation.api.odyssey.ml/sdk/javascript/simulations.md): Run scripted video generation asynchronously with the Simulate API.
+- [Types & Interfaces](https://documentation.api.odyssey.ml/sdk/javascript/types.md): TypeScript types and interfaces for the Odyssey client.
+- [Odyssey Client](https://documentation.api.odyssey.ml/sdk/python/client.md): Main client class for interacting with Odyssey's audio-visual intelligence.
+- [Examples](https://documentation.api.odyssey.ml/sdk/python/examples.md): Complete usage examples for the Odyssey Python client.
+- [Overview](https://documentation.api.odyssey.ml/sdk/python/introduction.md): Complete API reference for the Odyssey Python client library.
+- [Recordings](https://documentation.api.odyssey.ml/sdk/python/recordings.md): Working with stream recordings in the Odyssey Python client.
+- [Simulate API](https://documentation.api.odyssey.ml/sdk/python/simulations.md): Run scripted video generation asynchronously with the Simulate API.
+- [Types & Dataclasses](https://documentation.api.odyssey.ml/sdk/python/types.md): Python types and dataclasses for the Odyssey client.
+- [Session Management](https://documentation.api.odyssey.ml/session-management.md): Understanding interactive stream sessions, concurrent limits, and common troubleshooting scenarios.
+- [Stream Duration Limits](https://documentation.api.odyssey.ml/stream-duration-limits.md): How per-stream duration limits work, what the 'credit lease expired' error means, and how to keep streaming without interruption.

@@ -1,0 +1,51 @@
+generated: '2026-07-20'
+method: searched
+source: https://documentation.api.odyssey.ml/llms.txt
+summary: >-
+  Cross-cutting runtime semantics for the Odyssey-2 Pro API, captured from the
+  developer documentation. Odyssey is a real-time world-model streaming API: the
+  primary surface is WebRTC media plus a WebSocket signaling channel driven by the
+  JavaScript/Python SDKs, not a request/response REST API. There is no documented
+  idempotency key, pagination, or field-expansion model — the semantics that matter
+  are session lifecycle, concurrency, credential scope, and stream duration.
+authentication:
+  style: api-key + short-lived session JWT (client credentials)
+  detail: authentication/odyssey-authentication.yml
+transport:
+  media: WebRTC (server returns a MediaStream)
+  signaling: WebSocket (signaling_url)
+  endpoints: [interactive streams, viewable streams, simulations]
+  api_host: https://api.odyssey.ml
+session_model:
+  connect: client.connect() / connectWithCredentials()
+  stream: startStream() -> interact() -> endStream()
+  disconnect_required: true
+  idle_cleanup_minutes: 15
+  session_token_ttl_seconds: 600
+  token_refresh: false
+concurrency:
+  interactive_streams: plan-limited (Free tier = 5 concurrent)
+  simulation_queue: plan-limited (currently up to 10 queued jobs)
+  dangling_sessions: >-
+    Sessions not closed with disconnect() count toward the concurrency limit until
+    they time out (15 min idle).
+idempotency:
+  supported: false
+  note: >-
+    No idempotency-key contract is documented; each createClientCredentials() call
+    provisions a new, non-reusable session.
+pagination:
+  supported: false
+  note: Streaming API; no list/collection pagination is documented.
+versioning:
+  scheme: semver (SDK)
+  detail: lifecycle/odyssey-lifecycle.yml
+  capability_flags: "Responses may include capabilities (e.g. { image_to_video: true }); introduced v1.3.0+"
+error_model:
+  style: SDK exceptions
+  detail: errors/odyssey-error-codes.yml
+media_input:
+  image_to_video:
+    max_size_mb: 25
+    formats: [JPEG, PNG, WebP, GIF, BMP, HEIC, HEIF, AVIF]
+    resize_to: 1280x704 (landscape) or 704x1280 (portrait)

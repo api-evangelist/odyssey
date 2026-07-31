@@ -1,0 +1,22 @@
+generated: '2026-07-20'
+method: searched
+source: https://documentation.api.odyssey.ml/index
+versioning:
+  scheme: semver (SDK)
+  current: 1.3.1
+  surface: "@odysseyml/odyssey npm package"
+  docs: https://documentation.api.odyssey.ml/api-quick-start
+maturity: prototype
+maturity_note: >-
+  The API License Agreement governs "prototype Odyssey-2 API access". Odyssey-2 Pro
+  is offered as a frontier/prototype world-model API.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation or Sunset-header policy is documented.
+sla:
+  url: null
+  note: No published SLA/uptime target found.
+status_page: null
+status_page_note: No public status page found (probed odyssey.ml and api.odyssey.ml).
+changelog: changelog/odyssey-changelog.yml

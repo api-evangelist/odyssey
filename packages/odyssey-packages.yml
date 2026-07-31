@@ -1,0 +1,27 @@
+generated: '2026-07-20'
+method: searched
+source: https://documentation.api.odyssey.ml/api-quick-start
+packages:
+- language: javascript
+  registry: npm
+  name: "@odysseyml/odyssey"
+  url: https://www.npmjs.com/package/@odysseyml/odyssey
+  install: npm install @odysseyml/odyssey
+  version: 1.3.1
+  description: JavaScript/TypeScript client for Odyssey's audio-visual intelligence platform.
+  official: true
+  notes: >-
+    Also importable in the browser directly from a CDN (import { Odyssey } from
+    'https://esm.sh/@odysseyml/odyssey'). Ships a React entrypoint
+    (@odysseyml/odyssey/react) exposing the useOdyssey hook.
+- language: python
+  registry: github
+  name: odyssey (odysseyml/odyssey-python)
+  url: https://github.com/odysseyml/odyssey-python
+  install: pip install git+https://github.com/odysseyml/odyssey-python.git
+  description: Async Python client for interacting with Odyssey's audio-visual intelligence.
+  official: true
+  notes: >-
+    Distributed as a Git-installable package, not published to PyPI. The PyPI
+    project named "odyssey" is an unrelated multi-SCM workspace framework and is
+    NOT this SDK.

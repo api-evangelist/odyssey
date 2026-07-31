@@ -1,0 +1,35 @@
+generated: '2026-07-20'
+method: searched
+source: https://registry.npmjs.org/@odysseyml/odyssey
+scheme: semver
+component: "@odysseyml/odyssey (JavaScript/TypeScript SDK)"
+current: 1.3.1
+note: >-
+  Odyssey does not publish a dated prose changelog for the API. This is the
+  release timeline of the official npm SDK, which is the versioned surface
+  developers integrate against. Dates are npm publish dates.
+entries:
+- version: 1.3.1
+  date: '2026-05-21'
+- version: 1.3.0
+  date: '2026-04-14'
+  highlights: >-
+    Streamer `capabilities` (e.g. { image_to_video: true }) added to the
+    client-credentials response.
+- version: 1.2.0
+  date: '2026-04-02'
+- version: 1.1.2
+  date: '2026-03-18'
+- version: 1.1.1
+  date: '2026-03-11'
+- version: 1.1.0
+  date: '2026-03-05'
+- version: 1.0.0
+  date: '2026-01-23'
+  breaking: true
+  highlights: First stable major release of the Odyssey SDK.
+- version: 0.3.0
+  date: '2025-12-21'
+- version: 0.1.3
+  date: '2025-12-08'
+  highlights: Earliest published preview of the SDK.

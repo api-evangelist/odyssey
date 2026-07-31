@@ -1,0 +1,30 @@
+generated: '2026-07-20'
+method: searched
+source: https://documentation.api.odyssey.ml/api-quick-start
+summary: >-
+  Client-side, embeddable surfaces the Odyssey SDK exposes for putting a live,
+  interactive world-model video stream directly into a web page. Distinct from the
+  server-side SDK usage: these are the browser/React building blocks.
+loaders:
+- name: esm.sh CDN
+  usage: "import { Odyssey } from 'https://esm.sh/@odysseyml/odyssey'"
+  context: standalone HTML without a bundler
+components:
+- family: browser client
+  name: Odyssey (browser)
+  description: >-
+    Attaches a live MediaStream to a <video> element via client.connect() /
+    connectWithCredentials(); drives it with startStream()/interact()/endStream().
+  embeds: <video> element
+- family: react
+  name: useOdyssey
+  entrypoint: "@odysseyml/odyssey/react"
+  description: >-
+    React hook managing the Odyssey client lifecycle; returns videoRef plus
+    connect/connectWithCredentials/startStream helpers to bind an interactive stream
+    to a component.
+- family: hosted
+  name: Experience / Agora
+  description: >-
+    First-party hosted, interactive experiences (experience.odyssey.ml, agora.odyssey.ml)
+    demonstrating single-user and multi-agent shared simulations.
